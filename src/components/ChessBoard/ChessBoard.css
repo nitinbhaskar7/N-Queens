@@ -1,0 +1,16 @@
+.row{
+    display:flex;
+  }
+  .box{
+    height: 40px;
+    width: 40px;
+  }
+  .black{
+    background-color: #779556;
+  }
+  .white{
+    background-color: #ebecd0;
+  }
+  .red{
+    background-color: #ff0000;
+  }
