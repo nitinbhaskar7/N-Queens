@@ -42,7 +42,7 @@ export const SimulatorBoard = ({ sol, size }) => {
   
   return (
     <>
-
+      
       {
         board.map((row, rindex) => (
           <div className="flex flex-1" key={rindex}>

@@ -17,6 +17,10 @@ export default function Solutions({
 
   return (
     <div className="grid grid-cols-2 gap-4 justify-items-center">
+      <div className="col-span-2 text-center mb-4">
+        <h2 className="text-2xl font-bold">Solutions for {size}x{size} Board</h2>
+        <p className="text-gray-600">Showing {done + 1} of {chessboard.length} solutions</p>
+      </div>
       {chessboard.map((sol, solIndex) => (
         <div
           key={solIndex}
