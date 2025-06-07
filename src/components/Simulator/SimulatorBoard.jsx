@@ -12,32 +12,32 @@ export const SimulatorBoard = ({ sol, size }) => {
 
   // Try Solving the N-Queens problem using backtracking and each time a solution is found, update the board state with the new solution and use a delay to show the solution on the board.
 
-  const solveNQueens = (n) => {
-    // board is the state
-    if (n == board.length) {
-      return;
-    }
-    for (let i = 0; i < n; i++) {
-      if (isSafe(board, n, i)) {
-        board[n] = 1;
-        setBoard([...board]);
-        // delay for 1 second
-        setTimeout(() => {
-          solveNQueens(n + 1);
-        }, 1000);
+  // const solveNQueens = (n) => {
+  //   // board is the state
+  //   if (n == board.length) {
+  //     return;
+  //   }
+  //   for (let i = 0; i < n; i++) {
+  //     if (isSafe(board, n, i)) {
+  //       board[n] = 1;
+  //       setBoard([...board]);
+  //       // delay for 1 second
+  //       setTimeout(() => {
+  //         solveNQueens(n + 1);
+  //       }, 1000);
 
-        solveNQueens(n + 1);
+  //       solveNQueens(n + 1);
 
-        board[n] = 0;
-        setBoard([...board]);
-        // delay for 1 second
-        setTimeout(() => {
-          solveNQueens(n + 1);
-        }, 1000);
+  //       board[n] = 0;
+  //       setBoard([...board]);
+  //       // delay for 1 second
+  //       setTimeout(() => {
+  //         solveNQueens(n + 1);
+  //       }, 1000);
 
-      }
-    }
-  }
+  //     }
+  //   }
+  // }
 
   
   return (
