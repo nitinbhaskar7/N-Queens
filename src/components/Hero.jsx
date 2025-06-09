@@ -27,12 +27,12 @@ export default function HeroSectionSimpleCentred() {
                     <div className="mt-8 gap-3 flex justify-center">
                         <Button size={"lg"} asChild>
                             <Link href={"/learn"}>
-                                Get started
+                                Learn
                             </Link>
                         </Button>
                         <Button size={"lg"} variant={"outline"} asChild>
-                            <Link href={"https://github.com/nitinbhaskar7/Page-Replacement"} target="_blank">
-                            <FaGithub/> View Code on GitHub
+                            <Link href={"/play"} target="_blank">
+                             Play
                             </Link>
                         </Button>
                     </div>

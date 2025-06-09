@@ -41,15 +41,15 @@ export const SimulatorBoard = ({ sol, size }) => {
 
   
   return (
-    <>
-      
-      {
-        board.map((row, rindex) => (
+    <div className="relative">
+      {/* Board */}
+      <div>
+        {board.map((row, rindex) => (
           <div className="flex flex-1" key={rindex}>
             {row.map((value, cindex) => (
               <div
                 key={cindex}
-                className={`flex-1 flex items-center justify-center ${(rindex + cindex) % 2 === 0 ? "black" : "white"
+                className={`flex-1 flex items-center justify-center relative ${(rindex + cindex) % 2 === 0 ? "black" : "white"
                   }`}
                 style={{
                   width: `${400 / size}px`,
@@ -63,15 +63,14 @@ export const SimulatorBoard = ({ sol, size }) => {
                     className="queen w-3/4 h-3/4"
                   />
                 )}
+                {/* Label at bottom right */}
+                <span className="absolute bottom-1 right-1 text-[10px] text-gray-900 select-none">({rindex},{cindex})</span>
               </div>
             ))}
           </div>
-        ))
-      }
-
-    </>
-
-
+        ))}
+      </div>
+    </div>
   )
 }
 
